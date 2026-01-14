@@ -4,7 +4,7 @@
 |------------------------|--------|----------|---------------|
 | Introduction to Docker | Lesson | 2:00     | Suresh Sigera |
 
-### Learning Objectives
+### Learning Objectives (5 minutes)
 
 - Gain a solid understanding of Docker's core concepts and architecture
 - Manage the lifecycle of containers effectively
@@ -12,7 +12,7 @@
 - Deploy and manage real-world applications using Docker
 - Implement best practices for Docker in both development and production environments.
 
-##### The Docker Ecosystem
+##### The Docker Ecosystem (15 minutes)
 
 Docker has revolutionized application deployment by introducing a standardized approach to containerization. At its
 heart lies the Docker Engine, a powerful runtime environment that manages the entire container lifecycle. The Engine
@@ -34,7 +34,7 @@ The Docker Client acts as your primary interface with the Docker ecosystem. When
 interprets it and communicates with the daemon through the REST API. This client-server architecture provides
 flexibility in how you manage your containers, allowing for both local and remote container management.
 
-#### Core Concepts
+#### Core Concepts (10 minutes)
 
 Before diving into practical commands, let's understand the fundamental building blocks of Docker. Docker images serve
 as the foundation of container deployment. Think of an image as a blueprint containing everything needed to run an
@@ -47,7 +47,7 @@ environments where applications can run without interfering with each other. Eac
 process space, and network interface, while sharing the host system's kernel. This isolation ensures that applications
 run consistently regardless of where the container is deployed.
 
-#### Getting Started with Hello World
+#### Getting Started with Hello World (15 minutes)
 
 Let's begin our hands-on journey with Docker's traditional "Hello World" example. Open your terminal and enter:
 
@@ -67,7 +67,7 @@ exists locally. If found, it creates a new container and runs it. The container 
 displaying a welcome message - and then exits. This simple example demonstrates the basic flow of container creation and
 execution.
 
-#### Working with Ubuntu Container
+#### Working with Ubuntu Container (15 minutes)
 
 Now that we understand the basics, let's work with something more practical - an Ubuntu container. Start by pulling the
 Ubuntu image:
@@ -94,7 +94,7 @@ docker run -it ubuntu
 The `-it` flags create an interactive terminal session within the container. You're now working inside a containerized
 Ubuntu environment, completely isolated from your host system.
 
-### Container Lifecycle Management
+### Container Lifecycle Management (20 minutes)
 
 Managing containers effectively requires understanding their lifecycle. Let's explore the essential commands for
 container management. First, you can create a container without starting it:
@@ -158,7 +158,7 @@ Add the `-f` flag to follow log output in real-time:
 docker logs -f my-ubuntu
 ```
 
-#### Hands-on Practice: Running a Calculator API
+#### Hands-on Practice: Running a Calculator API (25 minutes)
 
 Now it's time to apply what you've learned by working with a real containerized API application. We'll pull and run a
 calculator API that performs basic arithmetic operations. This exercise will reinforce your understanding of container
@@ -216,7 +216,7 @@ For division operations, use:
 This will return "The result is 5". Note that if you try to divide by zero (num2=0), the API will return an error
 message.
 
-#### Troubleshooting Tips
+#### Troubleshooting Tips (10 minutes)
 
 If you encounter any issues:
 
@@ -238,7 +238,7 @@ Ensure no other services are using port `3001`:
 lsof -i :3001
 ```
 
-### Summary
+### Summary (5 minutes)
 
 Through this guide, we've explored Docker's fundamental concepts and essential commands. We've learned how the Docker
 ecosystem functions, understood the relationship between images and containers, and mastered basic container lifecycle
